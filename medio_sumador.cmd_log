@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/shogun/Documents/Tec/VHDL/sumador/medio_sumador.xst" -ofn "C:/Users/shogun/Documents/Tec/VHDL/sumador/medio_sumador.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c256-VQ100-7 medio_sumador.ngc medio_sumador.ngd  
+cpldfit -intstyle ise -p xc2c256-7-VQ100 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 medio_sumador.ngd 
+XSLTProcess medio_sumador_build.xml 
+tsim -intstyle ise medio_sumador medio_sumador.nga 
+taengine -intstyle ise -f medio_sumador -w --format html1 -l medio_sumador_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i medio_sumador 

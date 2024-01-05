@@ -1,0 +1,28 @@
+Command line:
+   sumador_completo_4b_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50228
+
+Fri Oct 07 00:14:12 2016
+
+
+ Elaboration Time: 0.46875 sec
+
+ Current Memory Usage: 1343.22 Meg
+
+ Total Signals          : 68
+ Total Nets             : 25
+ Total Signal Drivers   : 17
+ Total Blocks           : 12
+ Total Primitive Blocks : 8
+ Total Processes        : 17
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 385
+
+ Total Simulation Time: 0.515625 sec
+
+ Current Memory Usage: 556.765 Meg
+
+Fri Oct 07 01:26:43 2016
+

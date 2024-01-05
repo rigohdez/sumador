@@ -1,0 +1,2 @@
+vhdl work "medio_sumador.vhd"
+vhdl work "sumador_completo_1bit.vhd"

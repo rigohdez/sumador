@@ -1,0 +1,176 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C256100 | XC2C256-7-VQ100
+
+DEVICE | 2C256 | 2C256100 | 
+
+NETWORK | medio_sumador | 0 | 0 | 1073758214 | 0
+
+INPUT_INSTANCE | 0 | 0 | NULL | a_II | medio_sumador_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | a | 70 | PI | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | a_II/UIM | 76 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | a_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | b_II | medio_sumador_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | b | 71 | PI | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | b_II/UIM | 75 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | b_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | cout_MC | medio_sumador_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_II/UIM | 75 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | b_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_II/UIM | 76 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | a_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | cout_MC.Q | 78 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | cout_MC.Q | cout_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | cout_MC.SI | cout_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_II/UIM | 75 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | b_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_II/UIM | 76 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | a_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | cout_MC.D1 | 73 | ? | 0 | 0 | cout_MC | NULL | NULL | cout_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_TRUE | b_II/UIM | IV_TRUE | a_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | cout_MC.D2 | 74 | ? | 0 | 0 | cout_MC | NULL | NULL | cout_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | cout_MC.REG | cout_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | cout_MC.D | 72 | ? | 0 | 0 | cout_MC | NULL | NULL | cout_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | cout_MC.Q | 77 | ? | 0 | 0 | cout_MC | NULL | NULL | cout_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | cout | medio_sumador_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | cout_MC.Q | 78 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | cout_MC.Q | cout_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | cout | 79 | PO | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | cout | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | s_MC | medio_sumador_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_II/UIM | 75 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | b_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_II/UIM | 76 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | a_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | s_MC.Q | 84 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | s_MC.Q | s_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | s_MC.SI | s_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_II/UIM | 75 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | b_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_II/UIM | 76 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | a_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | s_MC.D1 | 82 | ? | 0 | 0 | s_MC | NULL | NULL | s_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | s_MC.D2 | 81 | ? | 0 | 0 | s_MC | NULL | NULL | s_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | b_II/UIM | IV_FALSE | a_II/UIM
+SPPTERM | 2 | IV_FALSE | b_II/UIM | IV_TRUE | a_II/UIM
+
+SRFF_INSTANCE | s_MC.REG | s_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | s_MC.D | 80 | ? | 0 | 0 | s_MC | NULL | NULL | s_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | s_MC.Q | 83 | ? | 0 | 0 | s_MC | NULL | NULL | s_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | s | medio_sumador_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | s_MC.Q | 84 | ? | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | s_MC.Q | s_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | s | 85 | PO | 0 | 0 | medio_sumador_COPY_0_COPY_0 | NULL | NULL | s | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 3 | s_MC | 1 | NULL | 0 | s | 1 | 99 | 51200
+FBPIN | 6 | cout_MC | 1 | NULL | 0 | cout | 1 | 97 | 49152
+FBPIN | 12 | NULL | 0 | a_II | 1 | NULL | 0 | 96 | 49152
+FBPIN | 13 | NULL | 0 | b_II | 1 | NULL | 0 | 95 | 49152
+
+FB_INSTANCE | FOOBAR2_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR3_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR5_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR6_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR7_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR8_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR9_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR10_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR11_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR12_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR13_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR14_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR15_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR16_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR17_ | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR5_ | FOOBAR5__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR6_ | FOOBAR6__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR7_ | FOOBAR7__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR8_ | FOOBAR8__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR9_ | FOOBAR9__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR10_ | FOOBAR10__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR11_ | FOOBAR11__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR12_ | FOOBAR12__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR13_ | FOOBAR13__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR14_ | FOOBAR14__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR15_ | FOOBAR15__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR16_ | FOOBAR16__ctinst | medio_sumador_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 3
+PLA_TERM | 0 | 
+SPPTERM | 2 | IV_FALSE | b_II/UIM | IV_TRUE | a_II/UIM
+PLA_TERM | 1 | 
+SPPTERM | 2 | IV_TRUE | b_II/UIM | IV_FALSE | a_II/UIM
+PLA_TERM | 25 | 
+SPPTERM | 2 | IV_TRUE | b_II/UIM | IV_TRUE | a_II/UIM
+
+
+IOSTD | LVCMOS18
+a | LVCMOS18
+b | LVCMOS18
+cout | LVCMOS18
+s | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 6 | a | 96 | 7 | b | 95
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | -1 | -1 | -1 | -1 | -1 | 6 | 7 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+

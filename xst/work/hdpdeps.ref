@@ -1,0 +1,30 @@
+V3 14
+FL C:/Users/shogun/Documents/Tec/VHDL/sumador/medio_sumador.vhd 2016/10/06.11:39:49 P.20131013
+EN work/medio_sumador 1475817206 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/medio_sumador.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/medio_sumador/funcional 1475817207 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/medio_sumador.vhd \
+      EN work/medio_sumador 1475817206
+FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit.vhd 2016/10/06.23:32:08 P.20131013
+EN work/sumador_completo_1bit 1475817208 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/sumador_completo_1bit/funcional 1475817209 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit.vhd \
+      EN work/sumador_completo_1bit 1475817208 CP medio_sumador
+FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_4b.vhd 2016/10/07.00:13:20 P.20131013
+EN work/sumador_completo_4b 1475817210 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_4b.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/sumador_completo_4b/funcional 1475817211 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_4b.vhd \
+      EN work/sumador_completo_4b 1475817210 CP medio_sumador \
+      CP sumador_completo_1bit
+FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_4bits.vhd 2016/10/06.23:29:16 P.20131013
+EN work/sumador_completo_4bits 0 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_4bits.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/sumador_completo_4bits/funcional 0 \
+      FL C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_4bits.vhd \
+      EN work/sumador_completo_4bits 0

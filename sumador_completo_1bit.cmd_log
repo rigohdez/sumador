@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit.xst" -ofn "C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit.syr" 
+xst -intstyle ise -ifn "C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit.xst" -ofn "C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit.syr" 

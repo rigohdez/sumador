@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit_isim_beh.exe" -prj "C:/Users/shogun/Documents/Tec/VHDL/sumador/sumador_completo_1bit_beh.prj" "work.sumador_completo_1bit" 

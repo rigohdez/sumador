@@ -1,0 +1,21 @@
+MDF Database:  version 1.0
+MDF_INFO | medio_sumador | XC2C256-7-VQ100
+MACROCELL | 0 | 5 | cout_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | b  | a
+INPUTP | 2 | 212 | 213
+EQ | 1 | 
+   cout = b & a;	// (1 pt, 2 inp)
+
+MACROCELL | 0 | 2 | s_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | b  | a
+INPUTP | 2 | 212 | 213
+EQ | 2 | 
+   s = b & !a
+	# !b & a;	// (2 pt, 2 inp)
+
+PIN | a | 64 | 16 | LVCMOS18 | 213 | 2 | 0 | 5 | 0 | 2
+PIN | b | 64 | 16 | LVCMOS18 | 212 | 2 | 0 | 5 | 0 | 2
+PIN | cout | 536871040 | 0 | LVCMOS18 | 214
+PIN | s | 536871040 | 0 | LVCMOS18 | 218

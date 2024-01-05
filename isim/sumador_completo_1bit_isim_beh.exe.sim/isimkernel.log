@@ -1,0 +1,10 @@
+Command line:
+   sumador_completo_1bit_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50483
+
+Fri Oct 07 01:28:41 2016
+
+
+ Elaboration Time: 0.5 sec
